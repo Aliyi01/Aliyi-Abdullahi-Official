@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aliyi Abdullahi - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+  <header data-aos="fade-down">
+    <nav class="navbar">
+      <div class="logo">
+       <img src="Photos/logo1.png" alt="Logo">
+        Aliyi Abdullahi
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkModeToggle" class="dark-mode-toggle">🌗</button>
+       <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>  
+ 
+  <section id="about" class="section" data-aos="fade-up">
+  	<br>
+    <h2>About Me</h2>
+    <p>Assalamu Aleykum Guys! I am Aliyi Abdullahi, a Web Developer and Designer with a BSc degree in Software Engineering from Addis Ababa Science and Technology University.</p>
+  </section>  
+ <section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="filter-buttons">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="design">Design</button>
+    <button data-filter="other">Other</button>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-item web">Portfolio Website</div>
+    <div class="project-item design">Logo Design</div>
+    <div class="project-item web">Business Website</div>
+    <div class="project-item other">API Integration</div>
+  </div>
+</section>
+  
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive Design</li>
+      <li>React, Bootstrap</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>  
+  
+  <section id="services" class="section" data-aos="fade-up">
+    <h2>Services</h2>
+    <ul>
+      <li>Website Design & Development</li>
+      <li>Responsive Web Design</li>
+      <li>UI/UX Consultation</li>
+    </ul>
+  </section>  
+  
+  <section id="testimonials" class="section" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p>"Aliyi was a pleasure to work with. He built our website quickly and with great quality!"</p>
+        <h4>- Sarah Johnson</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Very professional and creative. Highly recommend him for any web design project."</p>
+        <h4>- Daniel Tesfaye</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Delivered my project on time and exceeded my expectations. Fantastic developer!"</p>
+        <h4>- Lina Mohammed</h4>
+      </div>
+    </div>
+  </section> 
+  
+  <section id="blog" class="section" data-aos="fade-up">
+    <h2>Blog</h2>
+    <div class="blog-container">
+      <div class="blog-card">
+        <h3>5 Tips for Better Web Design</h3>
+        <p>Learn essential design tips to improve your website's look and user experience.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="blog-card">
+        <h3>Why Responsive Design Matters</h3>
+        <p>Discover how mobile-friendly design boosts usability and SEO.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="blog-card">
+        <h3>My Journey into Web Development</h3>
+        <p>Read about how I started coding and what keeps me motivated.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </section> 
+  
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  
+  
+  <footer data-aos="fade-up">
+  	<div class="footer-quick-links">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+  	<div class="social-links">
+  <a href="https://github.com/yourusername" target="_blank"><img src="icons/github.svg" alt="GitHub" /></a>
+  <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn" /></a>
+  <a href="https://twitter.com/yourusername" target="_blank"><img src="icons/twitter.svg" alt="Twitter" /></a>
+</div>
+    <p>&copy; 2025 Aliyi Abdullahi. All rights reserved.</p>
+  	<a href="https://your-direct-link.com/resume.pdf" download class="resume-btn">Download Resume</a>
+  </footer>  
+  <button id="backToTop" title="Go to top">↑</button>
+  <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggleTheme = document.getElementById('toggleTheme');
+    toggleTheme.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        projectItems.forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+  </script> 
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close menu on link click (mobile)
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Reveal on scroll
+    const sections = document.querySelectorAll('.section');
+    const options = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    sections.forEach(section => observer.observe(section));
+
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.onscroll = () => {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  backToTop.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+<script>
+  const toggleBtn = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Check localStorage first
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme) {
+    body.classList.toggle('dark-mode', savedTheme === 'dark');
+  } else {
+    // Auto detect system preference
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    body.classList.toggle('dark-mode', prefersDark);
+  }
+
+  toggleBtn.onclick = () => {
+    body.classList.toggle('dark-mode');
+    const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+  };
+</script>
+<script>
+  const filterButtons = document.querySelectorAll('.filter-buttons button');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.getAttribute('data-filter');
+
+      projectItems.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+  </body>
+</html>
