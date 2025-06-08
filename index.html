@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aliyi Abdullahi Official</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,om,am',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
     * {
       margin: 0;
@@ -106,33 +120,9 @@
       color: #222;
     }
 
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-item {
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .project-item img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      line-height: 2;
-    }
+    
     #about{
-    	background: #fff;
+    	background:white;
       padding: 20px;
       margin: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -140,7 +130,7 @@
       text-align: center;
     }
 #skills {
-	 background: #fff;
+	 background:white;
       padding: 20px;
       margin: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -148,7 +138,7 @@
       text-align: center;
 }
 #services{
-	 background: #fff;
+	 background:white;
       padding: 20px;
       margin: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -156,7 +146,7 @@
       text-align: center;
 }
 #blog{
-	 background: #fff;
+	 background:white;
       padding: 20px;
       margin: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -203,35 +193,161 @@
       }
     }
   </style>
+  <style>
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.project-filters button {
+  background-color: #eee;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.project-filters button.active,
+.project-filters button:hover {
+  background-color: #28a745;
+  color: white;
+}
+.project-item {
+  display: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  cursor: pointer;
+}
+.project-item.show {
+  display: block;
+  opacity: 1;
+}
+.project-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  flex-direction: column;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+#lightbox .controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+#lightbox button {
+  background-color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+</style>
+<style>
+.blog-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.blog-card-content {
+  padding: 15px;
+}
+.blog-card h4 {
+  margin-top: 0;
+  color: #333;
+}
+.blog-card p {
+  color: #666;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+#loadMoreBlogs {
+  margin: 30px auto;
+  display: block;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+#loadMoreBlogs:hover {
+  background-color: #218838;
+}
+</style>
 </head>
 <body>
   <header>
     <nav class="navbar">
+    	<div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
       <div class="logo">
       <img src="logo.jpg" alt="logo image">
         Aliyi Abdullahi Official 
       </div>
-
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About Me</a></li>
+       <li><a href="#about">About Me</a></li>
+         <li><a href="#blog">Blog</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
       <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
         <div></div>
       </div>
+     
     </nav>
   </header>
 	<br>
 		<br>
 			<br>
    
-<section id="about" class="about-section">
+<section id="about" class="about-section" data-aos="fade-right">
   <h2>About Me</h2>
   <p id="about-summary">
     I’m Aliyi Abdullahi(Eng), a passionate Web Developer and Designer with a BSc in Software Engineering from Addis Ababa Science and Technology University.
@@ -245,82 +361,89 @@
 </section>
 
 
-  <section id="projects" class="section">
-    <h2>My Projects</h2>
-    <div class="project-list">
-      <div class="project-item">
-      	<a href="">
-        <img src="P.jpg" alt="Project 1">
-         </a>
-        <h3>Nasiol Cave Website</h3>
-        <p>website was built using HTML, CSS, and JavaScript.</p>
+<section id="projects" data-aos="fade-up">
+      <h2>My Projects</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">  
+          <img src="P1.jpg" alt="UI/UX Project" width="300"> </div>
+          <div class="swiper-slide">  
+          <img src="P2.jpg" alt="Web Project" width="300"> </div>
+          <div class="swiper-slide"> 
+          <img src="P.jpg" alt="App Project" width="300"> </div>
+        </div>
       </div>
-      <div class="project-item">
-      	<a href="">
-        <img src="P1.jpg" alt="Project 2">
-         </a>
-        <h3>Melka Belo Administration</h3>
-        <p>Responsive government site using  HTML, CSS and JavaScript</p>
-      </div>
-      <div class="project-item">
-      	<a href="">
-        <img src="P2.jpg" alt="Project 2">
-        </a>
-        <h3>Wake-Up-Now Website</h3>
-        <p>Responsive Education site using HTML, CSS and JavaScript</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="section">
+
+
+  <section id="skills" class="section"  data-aos="zoom-in" class="animate-on-scroll">
     <h2>Skills</h2>
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Responsive Design</li>
-      <li>React, Bootstrap</li>
-      <li>UI/UX Design</li>
+      <h4>HTML, CSS, JavaScript</h4>
+      <h4>Responsive Design</h4>
+      <h4>React, Bootstrap</h4>
+      <h4>UI/UX Design</h4>
     </ul>
   </section>
 
-  <section id="services" class="section">
-    <h2>Services</h2>
-    <ul>
-      <li>Website Design & Development</li>
-      <li>Responsive Web Design</li>
-      <li>UI/UX Consultation</li>
-    </ul>
-  </section>
-<section id="blog" class="section" data-aos="fade-up">
-    <h2>Blog</h2>
-    <div class="blog-container">
-      <div class="blog-card">
-        <h3>5 Tips for Better Web Design</h3>
-        <p>Learn essential design tips to improve your website's look and user experience.</p>
-        <a href="#">Read More</a>
+  <section id="services" class="services-section" data-aos="zoom-out">
+  <h2>Select Services You Need</h2>
+  <form action="https://formspree.io/f/mzzgbond" method="POST" class="services-form">
+    <label><input type="checkbox" name="services" value="Website Design"> Website Design</label>
+    <label><input type="checkbox" name="services" value="Frontend Development"> Frontend Development</label>
+    <label><input type="checkbox" name="services" value="Responsive Fixing"> Responsive Fixing</label>
+    <label><input type="checkbox" name="services" value="UI/UX Design"> UI/UX Design</label>
+    <label><input type="checkbox" name="services" value="Website Redesign"> Website Redesign</label>
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<section id="blog" data-aos="fade-right">
+  <h2>Updates Info</h2>
+  <div class="swiper blogSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="EC.png" alt="Blog 1" width="300">
+        <h3>What is EthioCoders Initiatives?</h3>
+        <p>Ethiocodersâ€ is Ethiopiaâ€™s massive digital upskilling projectâ€”training 5â€¯million young citizens in coding and data skills by 2026. Itâ€™s achieved significant early traction (hundreds of thousands registered) and aligns with national goals of tech-enabled development, while sparking debate on its feasibility and depth....</p>
+        <button class="read-more"><a href="EthioCoders.html" >Read more</a></button>
       </div>
-      <div class="blog-card">
-        <h3>Why Responsive Design Matters</h3>
-        <p>Discover how mobile-friendly design boosts usability and SEO.</p>
-        <a href="#">Read More</a>
+      <div class="swiper-slide">
+        <img src="DE.png" alt="Blog 2" width="300"> 
+        <h3> You Know Digital Ethiopia 🇪🇹?</h3>
+        <p>Ethiopiaâ€™s digital transformation is advancing rapidly across multiple sectorsâ€”and hereâ€™s a clear snapshot of where it stands as of midâ€‘2025...</p>
+        <button class="read-more"><a href="digitalEt.html" > Read more </a></button>
       </div>
-      <div class="blog-card">
-        <h3>My Journey into Web Development</h3>
-        <p>Read about how I started coding and what keeps me motivated.</p>
-        <a href="#">Read More</a>
+      <div class="swiper-slide">
+        <img src="RY.png" alt="Blog 3" width="300">
+        <h3>The Role of Youth in future world!</h3>
+        <p>The role of youth in shaping the future world is both pivotal and transformative. As the most dynamic and adaptive segment of the population, young people bring innovation, energy, and a fresh perspective that can address global challenges and drive lasting change. Here's a detailed look...</p>
+        <button class="read-more"><a href="youthrol.html" > Read more </a></button>
       </div>
     </div>
-  </section> 
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mzzgbond" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  <footer>
-  		<div class="footer-quick-links">
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+  
+  <section id="contact" class="contact-section"  data-aos="fade-up" class="animate-on-scroll">
+  <h2>Contact Me</h2>
+  <p>You can also reach me directly:</p>
+  <p><strong>Email:</strong> aliyiabdulla12@gmail.com</p>
+  <p><strong>Phone:</strong> +251915186926</p>
+  <form action="https://formspree.io/f/mzzgbond" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+  <footer  data-aos="fade-up">
+  		<div class="footer-quick-links"  data-aos="fade-left">
   <h3>Quick Links</h3>
   <ul>
     <li><a href="#about">About</a></li>
@@ -331,19 +454,43 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
-  	<div class="social-links">
+  	<div class="social-links"  data-aos="zoom-out">
   <a href="https://www.facebook.com/aliyia.mohammed" target="_blank"><img src="C1.jpeg" alt="Facebook" /></a>
   <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="C.png" alt="LinkedIn" /></a>
   <a href="https://www.youtube.com/@AliyiAbdullahi01" target="_blank"><img src="C2.png" alt="YouTube" /></a>
-  <a href="Let's chat on WhatsApp! It's a fast, simple, and secure app we can use to message and call each other for free. Get it at https://whatsapp.com/dl/
-
-" target="_blank"><img src="C4.jpeg" alt="WhatsApp" /></a>
-  <a href="t.me/A2M01a" target="_blank"><img src="C3.jpeg" alt="Telegram" /></a>
+  <a href="+251915186926" target="_blank"><img src="C4.jpeg" alt="WhatsApp" /></a>
+  <a href="@A2M01a" target="_blank"><img src="C3.jpeg" alt="Telegram" /></a>
 </div>
     <p>&copy; 2025 AliyiAbdullahiOfficial. All rights reserved.</p>
-    <a href="Aliyi CV for Final.pdf" download class="resume-btn">Download Resume</a>
+    <a href="Aliyi Abdullahi Documents.pdf" download class="resume-btn">See Education</a>
   </footer>
  <button id="backToTop" title="Go to top">↑</button>
+ <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true      // animate only once when scrolling down
+  });
+</script>
   <script>
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -402,5 +549,107 @@ function toggleReadMore() {
   }
 }
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.project-filters button');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const projectImages = document.querySelectorAll('.project-item img');
+  let currentIndex = 0;
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.project-item').forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.classList.add('show');
+        } else {
+          item.classList.remove('show');
+        }
+      });
+    });
+  });
+
+  function showLightbox(index) {
+    const img = projectImages[index];
+    if (img) {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+      currentIndex = index;
+    }
+  }
+
+  projectImages.forEach((img, index) => {
+    img.addEventListener('click', () => showLightbox(index));
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + projectImages.length) % projectImages.length;
+    showLightbox(currentIndex);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % projectImages.length;
+    showLightbox(currentIndex);
+  });
+
+  document.getElementById('close').addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+});
+</script>
+<script>
+const blogContainer = document.getElementById('blogContainer');
+const loadMoreBtn = document.getElementById('loadMoreBlogs');
+
+const moreBlogs = [
+  {
+    title: 'AI in Design',
+    image: 'blog4.jpg',
+    description: 'How AI tools are transforming the future of design and development.',
+    link: 'blog-details/ai-in-design.html'
+  },
+  {
+    title: 'CSS Mastery Tips',
+    image: 'blog5.jpg',
+    description: 'Level up your CSS skills with these advanced tips and tricks.',
+    link: 'blog-details/css-mastery-tips.html'
+  },
+  {
+    title: 'Freelancing 101',
+    image: 'blog6.jpg',
+    description: 'Essential steps for starting a successful freelancing career.',
+    link: 'blog-details/freelancing-101.html'
+  },
+];
+
+loadMoreBtn.addEventListener('click', () => {
+  moreBlogs.forEach(blog => {
+    const card = document.createElement('div');
+    card.className = 'blog-card';
+    card.innerHTML = `
+      <img src="${blog.image}" alt="${blog.title}">
+      <div class="blog-card-content">
+        <h4>${blog.title}</h4>
+        <p>${blog.description}</p>
+        <a href="${blog.link}" class="read-more">Read more</a>
+      </div>
+    `;
+    blogContainer.appendChild(card);
+  });
+  loadMoreBtn.style.display = 'none';
+});
+</script>
+ <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.classList.add("hidden");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </body>
-      </html>
+</html>
