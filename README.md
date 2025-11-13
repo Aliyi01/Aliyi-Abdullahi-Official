@@ -1,2 +1,2 @@
 # Aliyi-Abdullahi-Official
-Frontend Web Developer and Designer 
+ Web Developer and Designer 
